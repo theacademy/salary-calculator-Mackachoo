@@ -24,10 +24,10 @@ public class EmployeeSalaryCalculator
 		//Input
 		System.out.println("Enter an Employee ID: ");
 		employeeID = sc.nextLine();
-		
+
 		System.out.println("Enter an Employee Name: ");
 		employeeName = sc.nextLine();
-		
+
 		System.out.println("Enter the no. of Hours Worked: ");
 		hoursWorked = sc.nextInt();
 		
@@ -42,38 +42,19 @@ public class EmployeeSalaryCalculator
 	{
 		hourlyRate = HR;
 		hoursWorked = HW;
-		
-		/*
-		All new code must be added between the commented lines below.
-			YOUR CODE STARTS HERE
-			YOUR CODE ENDS HERE
-		Test cases execute automatically each time you commit code.
-		You must follow these rules:
-			1. Do not change any code outside the new code placeholders.
-			2. Your own code must be inside the new code placeholders.
-			3. Do not change existing class names, interface names, method signatures, or attributes.
-			4. Follow standard Java naming conventions for all code that you write.
-		*/
-
 
 				if(HW <= standardWorkingHours)
 				{
-					//YOUR CODE STARTS HERE
-					//  grossSalary = HR * HW;
-					//  basicPay = HR * HW;
-
-					//YOUR CODE ENDS HERE
+					grossSalary = HR * HW;
+					basicPay = HR * HW;
 				}
 				else
 				{
-					//YOUR CODE STARTS HERE
-					// basicPay = HR * standardWorkingHours;
-					// overTimeRate = 2 * HR;
-					// overTime = HW - standardWorkingHours;
-					// overTimePay = overTimeRate * overTime;
-					// grossSalary = basicPay + overTimePay;
-
-					//YOUR CODE ENDS HERE
+					basicPay = HR * standardWorkingHours;
+					overTimeRate = 2 * HR;
+					overTime = HW - standardWorkingHours;
+					overTimePay = overTimeRate * overTime;
+					grossSalary = basicPay + overTimePay;
 				}
 				return grossSalary;
 	}
